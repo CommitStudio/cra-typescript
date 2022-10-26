@@ -1,25 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HowOldIn2030TS from "./pages/HowOldIn2030TS";
+import HowOldIn2030JS from "./pages/HowOldIn2030JS";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route
+          path="/how-old-i-will-be-in-2030-JS"
+          element={<HowOldIn2030JS />}
+        />
+        <Route
+          path="/how-old-i-will-be-in-2030-TS"
+          element={<HowOldIn2030TS />}
+        />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
